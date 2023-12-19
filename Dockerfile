@@ -2,7 +2,7 @@
 FROM nextcloud:27.1.5-fpm-alpine
 
 # Copy custom scripts and set execute permissions
-COPY path/to/docker-entrypoint.sh /sbin/docker-entrypoint.sh
+COPY docker-entrypoint.sh /sbin/docker-entrypoint.sh
 RUN chmod +x /sbin/docker-entrypoint.sh
 
 # Set the entrypoint and default command
