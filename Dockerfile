@@ -1,7 +1,8 @@
+# Use the official Nextcloud image as the base image
 FROM nextcloud:27.1.5-fpm-alpine
 
 # Copy custom scripts and set execute permissions
-COPY sbin/* /sbin/
+COPY path/to/docker-entrypoint.sh /sbin/docker-entrypoint.sh
 RUN chmod +x /sbin/docker-entrypoint.sh
 
 # Set the entrypoint and default command
